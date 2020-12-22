@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.training.ykb.rest.Person;
 
 @RestController
-@RequestMapping("/person/provision")
-public class PersonProvisionRest {
+@RequestMapping("/api/v1/person/provision")
+public class PersonProvisionRestD1 {
 
     @PutMapping
     public String add(@RequestBody final Person person) {

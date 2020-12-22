@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/person/search")
-public class PersonSearchRest {
+@RequestMapping("/api/v1/person/search")
+public class PersonSearchRestD1 {
 
     @GetMapping
     public String getAll(@RequestParam("id") final long id) {
