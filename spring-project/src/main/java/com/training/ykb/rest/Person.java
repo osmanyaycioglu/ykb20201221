@@ -1,5 +1,8 @@
 package com.training.ykb.rest;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Person {
 
     private String name;

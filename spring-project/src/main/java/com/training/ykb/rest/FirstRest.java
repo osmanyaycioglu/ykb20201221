@@ -1,5 +1,6 @@
 package com.training.ykb.rest;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -89,6 +90,21 @@ public class FirstRest {
         }
         return personstr;
     }
+
+    @PostMapping(value = "/hello10",
+                 consumes = {
+                              MediaType.APPLICATION_JSON_VALUE,
+                              MediaType.APPLICATION_XML_VALUE
+                 },
+                 produces = {
+                              MediaType.APPLICATION_JSON_VALUE,
+                              MediaType.APPLICATION_XML_VALUE
+                 })
+    public Person hello10(@RequestBody final Person person) {
+        person.setAge(99);
+        return person;
+    }
+
 
     // -------------------------------------
     @GetMapping("/hello")
