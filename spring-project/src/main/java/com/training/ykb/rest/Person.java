@@ -6,12 +6,17 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.training.ykb.rest.custom.validation.StartWith;
+
 @XmlRootElement
 public class Person {
 
+    @StartWith("is")
     @NotEmpty
     @Size(min = 2, max = 20, message = "Name 2 ile 20 arasında olmalı")
     private String name;
+
+    @StartWith("soy")
     @NotEmpty
     @Size(min = 3, max = 25, message = "Name 3 ile 25 arasında olmalı")
     private String surname;

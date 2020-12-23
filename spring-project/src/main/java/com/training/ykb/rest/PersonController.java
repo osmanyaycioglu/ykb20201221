@@ -37,7 +37,7 @@ public class PersonController {
     public ResponseEntity<String> add3(@Validated @RequestBody final Person person,
                                        final HttpServletRequest hsr,
                                        final HttpHeaders httpRequest) {
-        if (person.getAge() > 120) {
+        if (person.getAge() > 80) {
             throw new IllegalArgumentException("Age 120 den büyük olamaz");
         }
         return ResponseEntity.status(287)
