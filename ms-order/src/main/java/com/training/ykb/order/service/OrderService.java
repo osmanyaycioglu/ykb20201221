@@ -15,4 +15,8 @@ public class OrderService {
         return this.af.charge(order);
     }
 
+    public String orderPlace2(final Order order) {
+        return this.af.charge2(order);
+    }
+
 }

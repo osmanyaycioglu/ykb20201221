@@ -22,4 +22,10 @@ public class OrderRest {
         return this.os.orderPlace(order);
     }
 
+    @PostMapping("/place2")
+    public String place2(@Validated @RequestBody final Order order) {
+        // Feign client
+        return this.os.orderPlace2(order);
+    }
+
 }
