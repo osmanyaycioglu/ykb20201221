@@ -12,6 +12,7 @@ import com.netflix.discovery.shared.Application;
 import com.training.ykb.order.clients.IAccountingClient;
 import com.training.ykb.order.model.Order;
 import com.training.ykb.order.model.PaymentRequest;
+import com.training.ykb.rest.error.RestException;
 
 @Service
 public class AccountingFacade {
@@ -25,7 +26,7 @@ public class AccountingFacade {
     @Autowired
     private EurekaClient      eurekaClient;
 
-    public String charge2(final Order order) {
+    public String charge2(final Order order) throws RestException {
         PaymentRequest pr = new PaymentRequest();
         pr.setCustomerId(order.getCustomerId());
         pr.setAmount(100);

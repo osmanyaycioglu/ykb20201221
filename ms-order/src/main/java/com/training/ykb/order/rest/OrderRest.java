@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.training.ykb.order.model.Order;
 import com.training.ykb.order.service.OrderService;
+import com.training.ykb.rest.error.RestException;
 
 @RestController
 @RequestMapping("/order")
@@ -23,7 +24,7 @@ public class OrderRest {
     }
 
     @PostMapping("/place2")
-    public String place2(@Validated @RequestBody final Order order) {
+    public String place2(@Validated @RequestBody final Order order) throws RestException {
         // Feign client
         return this.os.orderPlace2(order);
     }

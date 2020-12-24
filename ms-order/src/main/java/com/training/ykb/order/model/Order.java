@@ -2,13 +2,11 @@ package com.training.ykb.order.model;
 
 import java.util.List;
 
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class Order {
 
-    @NotEmpty
     private String       customerId;
     @NotNull
     @Size(min = 1)
